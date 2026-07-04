@@ -1,0 +1,35 @@
+{
+  "args": {
+    "backbones": [
+      "gdn",
+      "deltanet",
+      "gla"
+    ],
+    "facts": 32,
+    "noise": 64,
+    "w": 32,
+    "d": 32,
+    "alpha": 0.98,
+    "codebook": 64,
+    "trials": 200,
+    "seed": 0,
+    "out": "/Users/loversky/Documents/Build with Paper/hola/results"
+  },
+  "results": {
+    "gdn": {
+      "state_only": 0.09859375,
+      "with_cache": 0.99796875,
+      "lift": 0.8993749999999999
+    },
+    "deltanet": {
+      "state_only": 0.1934375,
+      "with_cache": 0.97484375,
+      "lift": 0.78140625
+    },
+    "gla": {
+      "state_only": 0.8659375,
+      "with_cache": 0.985625,
+      "lift": 0.11968749999999995
+    }
+  }
+}

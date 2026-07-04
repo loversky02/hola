@@ -1,0 +1,26 @@
+{
+  "n_facts": 6144,
+  "gdn_forget_rate": 0.90478515625,
+  "auc_surprise_predicts_forgetting": 0.4754956542328372,
+  "failure_coverage_importance": 0.23277567907897104,
+  "failure_coverage_recency": 0.0652995143011333,
+  "importance_retention_on_remembered": 0.26324786324786326,
+  "args": {
+    "steps": 1600,
+    "npairs": 40,
+    "nquery": 6,
+    "gap": 16,
+    "nkeys": 96,
+    "nvalues": 32,
+    "w": 24,
+    "chunk": 8,
+    "dmodel": 64,
+    "nheads": 4,
+    "dhead": 8,
+    "layer": 0,
+    "batch": 32,
+    "device": "cpu",
+    "seed": 0,
+    "out": "/Users/loversky/Documents/Build with Paper/hola/results"
+  }
+}
