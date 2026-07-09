@@ -22,6 +22,22 @@ Both projects argue for **learned read policy**. HOLA learns/uses a salience sco
 
 `recurrent state → HOLA exact cache → NapMem text pyramid → AutoMem learned write policy`
 
+## Shared Risk: Read When Needed
+
+The NapMem-VN repro now has a concrete reward finding: a usage bonus can penalize
+correctly skipping memory. In a mixed prompted batch, the navigator answered both
+memory and non-memory questions correctly, skipped memory for the non-memory
+questions, and still scored lower under `F+C+U` than under `F+C`.
+
+That lesson also matters for HOLA. A learned cache read policy should not optimize
+for cache access by itself; it should optimize calibrated access. The portfolio
+claim becomes stronger if both projects track:
+
+- answer accuracy
+- memory/cache access rate
+- unnecessary access rate on non-memory tasks
+- cost-aware reward without an unconditional usage bonus
+
 ## Experiment Bridge
 
 Use the same synthetic facts with distractors:
@@ -29,3 +45,4 @@ Use the same synthetic facts with distractors:
 1. HOLA: can the cache retrieve the buried fact?
 2. NapMem: can the tool navigator choose record/topic/raw evidence?
 3. AutoMem+NapMem: can the system both write the fact into the right layer and later read the right layer?
+4. Cross-project: does either learned read policy over-access memory when the answer does not require it?
